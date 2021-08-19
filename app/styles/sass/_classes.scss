@@ -22,6 +22,12 @@
     align-items: center;
 }
 
+%f-row-start-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
 %f-col-c-c {
     display: flex;
     flex-direction: column;

@@ -32,6 +32,10 @@
             margin-top: 3.75rem;
         }
 
+        @include breakpoint-up(large) {
+            width: 89%;
+        }
+
         &-item {
             font-family: $firago-b;
             font-size: 0.75rem;
@@ -83,13 +87,17 @@
         &-form {
             width: 100%;
             margin: 1.875rem 0;
-        
+
             &-label {
                 display: inline-block;
                 font-family: $firago-m;
                 font-size: 1rem;
                 line-height: 1.3125rem;
                 margin-bottom: 0.75rem;
+
+                > a {
+                    color: $blue;
+                }
 
                 &.required {
                     &::after {
@@ -103,7 +111,39 @@
 
             &-input {
                 width: 100%;
+                height: 2.5rem;
+                padding: 0.625rem 0.8125rem;
                 margin-bottom: 1.875rem;
+                border: 1px solid $blue;
+                outline: none;
+                border-radius: 0.5rem;
+
+                &[type="checkbox"] {
+                    width: auto;
+                    height: auto;
+                    margin-right: 0.625rem;
+                    margin-bottom: 0.75rem;
+                }
+
+                &[type="submit"] {
+                    background-color: $blue;
+                    color: $white;
+                    font-size: 1rem;
+                    line-height: 1.3125rem;
+                    border: none;
+                    outline: none;
+                    border-radius: 0.5rem;
+                    margin: 1.875rem 0;
+                }
+            }
+
+            &-cb {
+                @extend %f-row-start-start;
+
+                &.cb {
+                    font-size: 0.875rem;
+                    line-height: 1.5rem;
+                }
             }
         }
     }

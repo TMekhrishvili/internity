@@ -238,6 +238,18 @@ a {
           align-items: center;
 }
 
+.main-signout-form-cb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 .main-signout {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -464,6 +476,12 @@ body {
   }
 }
 
+@media (min-width: 64em) {
+  .main-nav {
+    width: 89%;
+  }
+}
+
 .main-nav-item {
   font-family: "FiraGO-Bold";
   font-size: 0.75rem;
@@ -530,6 +548,10 @@ body {
   margin-bottom: 0.75rem;
 }
 
+.main-signout-form-label > a {
+  color: #7279ff;
+}
+
 .main-signout-form-label.required::after {
   content: "*";
   color: #e74c3c;
@@ -539,6 +561,34 @@ body {
 
 .main-signout-form-input {
   width: 100%;
+  height: 2.5rem;
+  padding: 0.625rem 0.8125rem;
   margin-bottom: 1.875rem;
+  border: 1px solid #7279ff;
+  outline: none;
+  border-radius: 0.5rem;
+}
+
+.main-signout-form-input[type="checkbox"] {
+  width: auto;
+  height: auto;
+  margin-right: 0.625rem;
+  margin-bottom: 0.75rem;
+}
+
+.main-signout-form-input[type="submit"] {
+  background-color: #7279ff;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  margin: 1.875rem 0;
+}
+
+.main-signout-form-cb.cb {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */
