@@ -641,6 +641,9 @@ body {
 .main-signout-alternative-or {
   margin: 2.5rem 0;
   width: 100%;
+  font-family: "FiraGO-Bold";
+  font-size: 0.8125rem;
+  line-height: 1.0625rem;
 }
 
 @media (min-width: 48em) {

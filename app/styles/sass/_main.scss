@@ -163,6 +163,9 @@
                 margin: 2.5rem 0;
                 width: 100%;
                 @extend %f-row-c-c;
+                font-family: $firago-b;
+                font-size: 0.8125rem;
+                line-height: 1.0625rem;
 
                 @include breakpoint-up(medium) {
                     margin: 3.4375rem 0;
