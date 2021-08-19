@@ -4,8 +4,11 @@ const btnClose = document.querySelector("#close");
 const fade = document.querySelectorAll('.fade');
 const mobileMenuItem = document.querySelectorAll('.header-mobile-menu-item');
 const overley = document.querySelector(".overley");
-hamburger.addEventListener("click", function () {
-    console.log("clicked");
+const menuItem = document.querySelectorAll(".header-menu-nav-item");
+
+// hamburger menu functional
+// open hamburger menu
+hamburger.addEventListener("click", () => {
     body.classList.add('noscroll');
     fade.forEach(function (element) {
         element.classList.remove('fade-out');
@@ -13,8 +16,8 @@ hamburger.addEventListener("click", function () {
     });
 });
 
+// close hamburger menu
 const closeHamburger = () => {
-    console.log("close");
     body.classList.remove('noscroll');
     fade.forEach(element => {
         element.classList.remove('fade-in');
@@ -22,11 +25,22 @@ const closeHamburger = () => {
     });
 }
 
-// close hamburger menu on click on menu item or close button
+// on close button
 mobileMenuItem.forEach(element => {
     element.addEventListener("click", closeHamburger);
 });
+
+// on overley
 overley.addEventListener("click", closeHamburger);
+
+// on mobile menu item
 btnClose.addEventListener("click", closeHamburger);
 
-
+// menu item - active
+menuItem.forEach(element => {
+    element.addEventListener("click", () => {
+        const active = document.querySelector(".active");
+        active.classList.remove("active");
+        element.classList.add("active");
+    });
+});
