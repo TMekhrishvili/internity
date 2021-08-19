@@ -36,6 +36,7 @@
             font-family: $firago-b;
             font-size: 0.75rem;
             line-height: 1rem;
+            color: $black;
 
             @include breakpoint-up(medium) {
                 margin: 3.75rem 0;

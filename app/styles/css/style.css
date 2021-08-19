@@ -468,6 +468,7 @@ body {
   font-family: "FiraGO-Bold";
   font-size: 0.75rem;
   line-height: 1rem;
+  color: black;
 }
 
 @media (min-width: 48em) {
