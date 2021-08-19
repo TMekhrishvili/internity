@@ -6,11 +6,10 @@
 > XD ფაილი:   
 https://drive.google.com/file/d/10y4C5xvhRe1f6VQJJc-ESFkHXt7KbVgY/view?usp=sharing 
 
-> ფონტები: 
+> ფონტები:   
 https://drive.google.com/file/d/18z5MC0H0ssUfRduMvC_p5Z2DnimyqlmB/view?usp=sharing  
 
 
----
 ## Requirements
 
 * აუცილებლად შესავსებ ველებს აქვთ წითელი ვარსკვლავი  
