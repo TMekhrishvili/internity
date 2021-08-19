@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'FiraGO-Medium';
     src: url('../../assets/fonts/FiraGo-Medium/FiraGO-Medium.eot');
-    src: url('../../assets/fonts/FiraGO-Medium.eot?#iefix') format('embedded-opentype'),
-        url('../../assets/fonts/FiraGO-Medium.woff2') format('woff2'),
-        url('../../assets/fonts/FiraGO-Medium.woff') format('woff'),
-        url('../../assets/fonts/FiraGO-Medium.ttf') format('truetype'),
-        url('../../assets/fonts/FiraGO-Medium.svg#FiraGO-Medium') format('svg');
+    src: url('../../assets/fonts/FiraGo-Medium/FiraGO-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts/FiraGo-Medium/FiraGO-Medium.woff2') format('woff2'),
+        url('../../assets/fonts/FiraGo-Medium/FiraGO-Medium.woff') format('woff'),
+        url('../../assets/fonts/FiraGo-Medium/FiraGO-Medium.ttf') format('truetype'),
+        url('../../assets/fonts/FiraGo-Medium/FiraGO-Medium.svg#FiraGO-Medium') format('svg');
     font-weight: 500;
     font-style: normal;
     font-display: swap;

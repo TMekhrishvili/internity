@@ -1,0 +1,30 @@
+%f-row-c-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%f-row-sb-c {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%f-row-start-c {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+%f-row-end-c {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+%f-col-c-c {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,87 @@
+.header {
+    @extend %f-row-sb-c;
+    @include dimension(100%, 5rem);
+    background-color: $white;
+    padding: 1.375rem 1rem;
+
+    @include breakpoint-up(medium){
+        width: 95%;
+        position: absolute;
+        top: 2.125rem;
+        left: calc(50% - 95%/2);
+        padding: 1.375rem 1.875rem;
+        border-radius: 0.5rem;
+    }
+
+    @include breakpoint-up(xLarge) {
+        width: 89%;
+        left: calc(50% - 89%/2);
+    }
+
+    &-menu {
+        @extend %f-row-c-c;
+
+        &-nav {
+            @extend %f-row-c-c;
+
+            &-item {
+                margin-right: 2.5rem;
+                font-family: $firago-m;
+                color: black;
+                font-size: 1rem;
+
+                &:last-child {
+                    margin-right: 1.0625rem;
+                }
+
+                &:hover {
+                    color: $blue;
+                }
+
+                &.active {
+                    color: $blue;
+                }
+            }
+        }
+
+        &-hamburger {
+            margin-right: 1.25rem;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &-signin {
+            @extend %f-row-c-c;
+            @include dimension(6.625rem, 2.5rem);
+            background-color: $blue;
+            color: $white;
+            font-family: $firago-m;
+            border-radius: 0.375rem;
+            border: none;
+            outline: none;
+            margin-right: 0.625rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            > img {
+                margin-right: 0.375rem;
+            }
+        }
+
+        &-search {
+            @extend %f-row-c-c;
+            @include dimension(2.5rem, 2.5rem);
+            background-color: $search-btn-bg;
+            border-radius: 0.375rem;
+            border: none;
+            outline: none;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

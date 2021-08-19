@@ -10,3 +10,9 @@
         @content;
     }
 }
+
+// dimension
+@mixin dimension($w, $h) {
+    width: $w;
+    height: $h;
+}
