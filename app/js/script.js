@@ -3,7 +3,7 @@ const hamburger = document.querySelector('#hamburger');
 const btnClose = document.querySelector("#close");
 const fade = document.querySelectorAll('.fade');
 const mobileMenuItem = document.querySelectorAll('.header-mobile-menu-item');
-
+const overley = document.querySelector(".overley");
 hamburger.addEventListener("click", function () {
     console.log("clicked");
     body.classList.add('noscroll');
@@ -26,6 +26,7 @@ const closeHamburger = () => {
 mobileMenuItem.forEach(element => {
     element.addEventListener("click", closeHamburger);
 });
+overley.addEventListener("click", closeHamburger);
 btnClose.addEventListener("click", closeHamburger);
 
 
