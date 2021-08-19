@@ -82,6 +82,10 @@
             text-align: center;
             color: $blue;
             margin: 0.75rem 0;
+
+            @include breakpoint-up(xLarge) {
+                width: 80%;
+            }
         }
 
         &-form {

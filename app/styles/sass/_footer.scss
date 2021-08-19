@@ -1,0 +1,80 @@
+.footer {
+    padding: 1.875rem 1rem;
+
+    @include breakpoint-up(medium) {
+        padding: 2.5rem 3.125rem;
+    }
+
+    &-items {
+        font-family: $firago-r;
+        font-size: 0.875rem;
+        line-height: 1.1875rem;
+
+        @include breakpoint-up(medium) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        &-contact {
+            @extend %f-row-start-c;
+            margin-bottom: 1.875rem;
+
+            @include breakpoint-up(medium) {
+                width: 100%;
+            }
+
+            > a {
+                @extend %f-row-start-c;
+                &:first-child {
+                    color: $black;
+                    font-family: $firago-r;
+                    font-size: 1rem;
+                    line-height: 1.3125rem;
+                    vertical-align: middle;
+
+                    &::after {
+                        width: 2px;
+                        height: 20px;
+                        content: "";
+                        display: inline-block;
+                        background-color: $black;
+                        opacity: 0.3;
+                        margin-left: 2.0625rem;
+                    }
+                }
+
+                &:nth-child(2) {
+                    margin: 0 1.5rem;
+                }
+
+                > img {
+                    &:hover {
+                        fill: $blue;
+                    }
+                }
+            }
+        }
+
+        &-item {
+            color: $black;
+            margin: 0.625rem 0;
+            display: block;
+
+            > span {
+                vertical-align: middle;
+            }
+        }
+
+        &-item-line {
+            display: none;
+            @include dimension(1px, 20px);
+            background-color: $black;
+
+            @include breakpoint-up(medium) {
+                display: inline-block;
+            }
+        }
+    }
+}

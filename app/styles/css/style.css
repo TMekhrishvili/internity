@@ -238,7 +238,7 @@ a {
           align-items: center;
 }
 
-.main-signout-alternative-btn {
+.main-signout-alternative-btn, .footer-items-contact, .footer-items-contact > a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -565,6 +565,12 @@ body {
   margin: 0.75rem 0;
 }
 
+@media (min-width: 85.375em) {
+  .main-signout-text {
+    width: 80%;
+  }
+}
+
 .main-signout-form {
   width: 100%;
   margin-top: 1.875rem;
@@ -727,5 +733,96 @@ body {
   content: url("../../assets/images/arrow.svg");
   display: inline-block;
   margin-left: 0.5rem;
+}
+
+.footer {
+  padding: 1.875rem 1rem;
+}
+
+@media (min-width: 48em) {
+  .footer {
+    padding: 2.5rem 3.125rem;
+  }
+}
+
+.footer-items {
+  font-family: "FiraGO-Regular";
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
+}
+
+@media (min-width: 48em) {
+  .footer-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.footer-items-contact {
+  margin-bottom: 1.875rem;
+}
+
+@media (min-width: 48em) {
+  .footer-items-contact {
+    width: 100%;
+  }
+}
+
+.footer-items-contact > a:first-child {
+  color: black;
+  font-family: "FiraGO-Regular";
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  vertical-align: middle;
+}
+
+.footer-items-contact > a:first-child::after {
+  width: 2px;
+  height: 20px;
+  content: "";
+  display: inline-block;
+  background-color: black;
+  opacity: 0.3;
+  margin-left: 2.0625rem;
+}
+
+.footer-items-contact > a:nth-child(2) {
+  margin: 0 1.5rem;
+}
+
+.footer-items-contact > a > img:hover {
+  fill: #7279ff;
+}
+
+.footer-items-item {
+  color: black;
+  margin: 0.625rem 0;
+  display: block;
+}
+
+.footer-items-item > span {
+  vertical-align: middle;
+}
+
+.footer-items-item-line {
+  display: none;
+  width: 1px;
+  height: 20px;
+  background-color: black;
+}
+
+@media (min-width: 48em) {
+  .footer-items-item-line {
+    display: inline-block;
+  }
 }
 /*# sourceMappingURL=style.css.map */
