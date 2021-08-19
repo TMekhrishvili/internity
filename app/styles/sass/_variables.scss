@@ -1,0 +1,10 @@
+// breakpoints
+// 768px, 1024px, 1366px
+$breakpoints-up: ("medium" : "48em", "large" : "64em", "xLarge" : "85.375em");
+// 767px, 1023px, 1365px
+$breakpoints-down: ("small" : "47.9375em", "medium" : "63.9375em", "large" : "85.3125em");
+
+// fonts
+$firago-m: 'FiraGO-Medium';
+$firago-r: 'FiraGO-Regular';
+$firago-b: 'FiraGO-Bold';
