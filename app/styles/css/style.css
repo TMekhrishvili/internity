@@ -569,14 +569,14 @@ body {
   border-radius: 0.5rem;
 }
 
-.main-signout-form-input[type="checkbox"] {
-  width: auto;
-  height: auto;
+.main-signout-form-input.cb {
+  width: 20px;
+  height: 20px;
   margin-right: 0.625rem;
   margin-bottom: 0.75rem;
 }
 
-.main-signout-form-input[type="submit"] {
+.main-signout-form-input.button {
   background-color: #7279ff;
   color: white;
   font-size: 1rem;
@@ -585,6 +585,10 @@ body {
   outline: none;
   border-radius: 0.5rem;
   margin: 1.875rem 0;
+}
+
+.main-signout-form-input.button:hover {
+  cursor: pointer;
 }
 
 .main-signout-form-cb.cb {
