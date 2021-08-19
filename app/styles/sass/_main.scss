@@ -86,7 +86,7 @@
 
         &-form {
             width: 100%;
-            margin: 1.875rem 0;
+            margin-top: 1.875rem;
 
             &-label {
                 display: inline-block;
@@ -110,13 +110,8 @@
             }
 
             &-input {
-                width: 100%;
-                height: 2.5rem;
-                padding: 0.625rem 0.8125rem;
-                margin-bottom: 1.875rem;
+                @extend %input;
                 border: 1px solid $blue;
-                outline: none;
-                border-radius: 0.5rem;
 
                 &.cb {
                     width: 20px;
@@ -133,7 +128,8 @@
                     border: none;
                     outline: none;
                     border-radius: 0.5rem;
-                    margin: 1.875rem 0;
+                    margin-top: 1.875rem;
+                    margin-bottom: 0;
 
                     &:hover {
                         cursor: pointer;
@@ -147,6 +143,102 @@
                 &.cb {
                     font-size: 0.875rem;
                     line-height: 1.5rem;
+                }
+            }
+        }
+
+        &-alternative {
+            width: 100%;
+            margin-bottom: 1.875rem;
+
+            @include breakpoint-up(medium) {
+                margin-bottom: 5.4375rem;
+            }
+
+            @include breakpoint-up(xLarge) {
+                margin-bottom: 8.875rem;
+            }
+
+            &-or {
+                margin: 2.5rem 0;
+                width: 100%;
+                @extend %f-row-c-c;
+
+                @include breakpoint-up(medium) {
+                    margin: 3.4375rem 0;
+                }
+
+                &::before {
+                    @extend %dashed;
+                    margin-right: 2.5rem;
+                }
+
+                &::after {
+                    @extend %dashed;
+                    margin-left: 2.5rem;
+                }
+            }
+
+            &-btn {
+                @extend %f-row-start-c;
+                @extend %input;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                border: none;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                &.fb {
+                    background-color: $fb;
+                }
+
+                &.gmail {
+                    background-color: $gmail;
+                }
+
+                > span {
+                    flex: 1;
+                    text-align: center;
+                    color: $white;
+                    font-family: $firago-m;
+                    font-size: 1rem;
+                    line-height: 2.5rem;
+                }
+            }
+
+            &-already {
+                margin-top: 0.625rem;
+
+                @include breakpoint-up(medium) {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 3.4375rem;
+                }
+
+                > p {
+                    text-align: center;
+                    font-family: $firago-r;
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+
+                    &:first-child {
+                        margin-right: 0.5rem;
+                    }
+
+                    &:last-child {
+                        > a {
+                            color: $blue;
+
+                            &::after {
+                                content: url("../../assets/images/arrow.svg");
+                                display: inline-block;
+                                margin-left: 0.5rem;
+                            }
+                        }
+                    }
                 }
             }
         }

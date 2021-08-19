@@ -214,7 +214,7 @@ a {
           animation: fade-out 0.5s ease forwards;
 }
 
-.header-menu, .header-menu-nav, .header-menu-signin, .header-menu-search, .header-mobile-menu-close {
+.header-menu, .header-menu-nav, .header-menu-signin, .header-menu-search, .header-mobile-menu-close, .main-signout-alternative-or {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -233,6 +233,18 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-signout-alternative-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -264,6 +276,24 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.main-signout-form-input, .main-signout-alternative-btn {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.625rem 0.8125rem;
+  margin-bottom: 1.875rem;
+  outline: none;
+  border-radius: 0.5rem;
+}
+
+.main-signout-alternative-or::before, .main-signout-alternative-or::after {
+  display: inline-block;
+  border-top: 2px dashed #7279ff;
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 @media (max-width: 63.9375em) {
@@ -537,7 +567,7 @@ body {
 
 .main-signout-form {
   width: 100%;
-  margin: 1.875rem 0;
+  margin-top: 1.875rem;
 }
 
 .main-signout-form-label {
@@ -560,13 +590,7 @@ body {
 }
 
 .main-signout-form-input {
-  width: 100%;
-  height: 2.5rem;
-  padding: 0.625rem 0.8125rem;
-  margin-bottom: 1.875rem;
   border: 1px solid #7279ff;
-  outline: none;
-  border-radius: 0.5rem;
 }
 
 .main-signout-form-input.cb {
@@ -584,7 +608,8 @@ body {
   border: none;
   outline: none;
   border-radius: 0.5rem;
-  margin: 1.875rem 0;
+  margin-top: 1.875rem;
+  margin-bottom: 0;
 }
 
 .main-signout-form-input.button:hover {
@@ -594,5 +619,110 @@ body {
 .main-signout-form-cb.cb {
   font-size: 0.875rem;
   line-height: 1.5rem;
+}
+
+.main-signout-alternative {
+  width: 100%;
+  margin-bottom: 1.875rem;
+}
+
+@media (min-width: 48em) {
+  .main-signout-alternative {
+    margin-bottom: 5.4375rem;
+  }
+}
+
+@media (min-width: 85.375em) {
+  .main-signout-alternative {
+    margin-bottom: 8.875rem;
+  }
+}
+
+.main-signout-alternative-or {
+  margin: 2.5rem 0;
+  width: 100%;
+}
+
+@media (min-width: 48em) {
+  .main-signout-alternative-or {
+    margin: 3.4375rem 0;
+  }
+}
+
+.main-signout-alternative-or::before {
+  margin-right: 2.5rem;
+}
+
+.main-signout-alternative-or::after {
+  margin-left: 2.5rem;
+}
+
+.main-signout-alternative-btn {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border: none;
+}
+
+.main-signout-alternative-btn:hover {
+  cursor: pointer;
+}
+
+.main-signout-alternative-btn.fb {
+  background-color: #39579a;
+}
+
+.main-signout-alternative-btn.gmail {
+  background-color: #d54b3d;
+}
+
+.main-signout-alternative-btn > span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  color: white;
+  font-family: "FiraGO-Medium";
+  font-size: 1rem;
+  line-height: 2.5rem;
+}
+
+.main-signout-alternative-already {
+  margin-top: 0.625rem;
+}
+
+@media (min-width: 48em) {
+  .main-signout-alternative-already {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 3.4375rem;
+  }
+}
+
+.main-signout-alternative-already > p {
+  text-align: center;
+  font-family: "FiraGO-Regular";
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.main-signout-alternative-already > p:first-child {
+  margin-right: 0.5rem;
+}
+
+.main-signout-alternative-already > p:last-child > a {
+  color: #7279ff;
+}
+
+.main-signout-alternative-already > p:last-child > a::after {
+  content: url("../../assets/images/arrow.svg");
+  display: inline-block;
+  margin-left: 0.5rem;
 }
 /*# sourceMappingURL=style.css.map */
