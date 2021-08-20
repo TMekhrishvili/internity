@@ -51,7 +51,7 @@
                 <label class="main-signout-form-label required" for="region">რეგიონი</label><br>
                 <div class="main-signout-form-input select">
                     <div class="placeholder">
-                        <span  id="choosen-region">აირჩიეთ რეგიონი</span>
+                        <span id="choosen-region">აირჩიეთ რეგიონი</span>
                         <img src="./app/assets/images/dropdown.svg" alt="dropdown">
                     </div>
                     <ul class="list">
@@ -83,10 +83,8 @@
                     </ul>
                 </div>
                 <div id="other-position-container" class="hide">
-                    <label class="main-signout-form-label required"
-                        for="other-position">შეიყვანეთ პოზიცია</label><br>
-                    <input id="other-position" class="main-signout-form-input" type="text"
-                        name="other-position"><br>
+                    <label class="main-signout-form-label required" for="other-position">შეიყვანეთ პოზიცია</label><br>
+                    <input id="other-position" class="main-signout-form-input" type="text" name="other-position"><br>
                 </div>
 
                 <label class="main-signout-form-label" for="workplace">სამუშაო ადგილი</label><br>
@@ -102,23 +100,29 @@
                 <input id="lastname" class="main-signout-form-input" type="text" name="lastname"><br>
 
                 <label class="main-signout-form-label required" for="password">პაროლი</label><br>
-                <input id="password" class="main-signout-form-input password" type="password" name="password"><br>
+                <div class="password">
+                    <input id="password" class="main-signout-form-input" type="password" name="password">
+                    <img class="eye" src="./app/assets/images/opened-eye.svg" alt="open">
+                </div>
 
                 <label class="main-signout-form-label required" for="repeat">გაიმეორეთ პაროლი</label><br>
-                <input id="repeat" class="main-signout-form-input password" type="password" name="repeat"><br>
+                <div class="password">
+                    <input id="repeat" class="main-signout-form-input" type="password" name="repeat">
+                    <img class="eye" src="./app/assets/images/opened-eye.svg" alt="open">
+                </div>
 
                 <div class="main-signout-form-cb">
                     <div id="conditions" class="main-signout-form-input checkbox">
                         <img src="./app/assets/images/checked.svg" alt="checked">
                     </div>
-                    <label class="main-signout-form-label" for="conditions">ვეთანხმები პლატფორმის <a href="#">მოხმარების
+                    <label class="main-signout-form-label">ვეთანხმები პლატფორმის <a href="#">მოხმარების
                             პირობებს</a></label><br>
                 </div>
                 <div class="main-signout-form-cb">
                     <div id="privacy" class="main-signout-form-input checkbox checked">
                         <img src="./app/assets/images/checked.svg" alt="checked">
                     </div>
-                    <label class="main-signout-form-label" for="privacy">გავეცანი <a href="#">კონფიდენციალურობის
+                    <label class="main-signout-form-label">გავეცანი <a href="#">კონფიდენციალურობის
                             პოლიტიკას</a></label><br>
                 </div>
 

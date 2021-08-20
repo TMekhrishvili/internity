@@ -53,14 +53,33 @@ regions.forEach(element => {
 });
 
 
+// toggle checkbox checked
 const checkbox = document.querySelectorAll(".checkbox");
-
 checkbox.forEach(element => {
     element.addEventListener("click", () => {
-        if(element.classList.contains('checked')) {
+        if (element.classList.contains('checked')) {
             element.classList.remove('checked');
         } else {
             element.classList.add('checked');
+        }
+    });
+});
+
+
+// toggle showing password
+const eyes = document.querySelectorAll(".eye");
+
+eyes.forEach(element => {
+    element.addEventListener("click", () => {
+        let previousSibling = element.previousElementSibling;
+        previousSibling.focus();
+        const src = element.getAttribute('src');
+        if (src.includes('opened')) {
+            previousSibling.setAttribute("type", "text");
+            element.setAttribute("src", "./app/assets/images/closed-eye.svg");
+        } else {
+            previousSibling.setAttribute("type", "password");
+            element.setAttribute("src", "./app/assets/images/opened-eye.svg");
         }
     });
 });

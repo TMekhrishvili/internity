@@ -644,6 +644,22 @@ body {
   margin-top: 1.875rem;
 }
 
+.main-signout-form .password {
+  position: relative;
+}
+
+.main-signout-form .password > img {
+  position: absolute;
+  top: 30%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 15px;
+}
+
+.main-signout-form .password > img:hover {
+  cursor: pointer;
+}
+
 .main-signout-form-label {
   display: inline-block;
   font-family: "FiraGO-Medium";
@@ -683,6 +699,7 @@ body {
   border-radius: 3px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  background-color: white;
 }
 
 .main-signout-form-input.checkbox.checked {
