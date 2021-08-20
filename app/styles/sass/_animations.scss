@@ -28,19 +28,35 @@
     }
 }
 
-.fade {
+.fade,
+.fade-signout {
     visibility: hidden;
 }
 
 .fade-in {
-    animation: fade-in 0.5s ease forwards;
+    animation: fade-in 0.5s ease-out forwards;
 }
 
 .fade-out {
-    animation: fade-out 0.5s ease forwards;
+    animation: fade-out 0.5s ease-out forwards;
 }
 
-@keyframes show-select {
+@keyframes fade {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+    80% {
+        visibility: visible;
+        opacity: 0.4;
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes show-position {
     from {
         height: 2.5rem;
     }
@@ -49,11 +65,11 @@
     }
 }
 
-.show-dropdown {
-    animation: show-select 0.3s ease forwards;
+.show-position-dropdown {
+    animation: show-position 0.3s ease forwards;
 }
 
-@keyframes close-select {
+@keyframes close-position-select {
     from {
         height: 10rem;
     }
@@ -62,6 +78,36 @@
     }
 }
 
-.close-dropdown {
-    animation: close-select 0.3s ease forwards;
+.close-position-dropdown {
+    animation: close-position-select 0.3s ease forwards;
+}
+
+@keyframes show-region-select {
+    from {
+        height: 2.5rem;
+    }
+    to {
+        height: 36rem;
+    }
+}
+
+.show-region-dropdown {
+    animation: show-region-select 0.3s ease forwards;
+}
+
+@keyframes close-region-select {
+    from {
+        height: 36rem;
+    }
+    to {
+        height: 2.5rem;
+    }
+}
+
+.close-region-dropdown {
+    animation: close-region-select 0.3s ease forwards;
+}
+
+.fd {
+    animation: fade 0.5s ease forwards;
 }

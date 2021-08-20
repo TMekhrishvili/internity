@@ -41,4 +41,8 @@ body {
     bottom: 10px;
     color: red;
     @include font($firago-r, 0.7rem, 1rem);
+
+    &.select {
+        bottom: -20px;
+    }
 }

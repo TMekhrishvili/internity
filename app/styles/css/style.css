@@ -200,21 +200,52 @@ a {
   }
 }
 
-.fade {
+.fade,
+.fade-signout {
   visibility: hidden;
 }
 
 .fade-in {
-  -webkit-animation: fade-in 0.5s ease forwards;
-          animation: fade-in 0.5s ease forwards;
+  -webkit-animation: fade-in 0.5s ease-out forwards;
+          animation: fade-in 0.5s ease-out forwards;
 }
 
 .fade-out {
-  -webkit-animation: fade-out 0.5s ease forwards;
-          animation: fade-out 0.5s ease forwards;
+  -webkit-animation: fade-out 0.5s ease-out forwards;
+          animation: fade-out 0.5s ease-out forwards;
 }
 
-@-webkit-keyframes show-select {
+@-webkit-keyframes fade {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  80% {
+    visibility: visible;
+    opacity: 0.4;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  80% {
+    visibility: visible;
+    opacity: 0.4;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes show-position {
   from {
     height: 2.5rem;
   }
@@ -223,7 +254,7 @@ a {
   }
 }
 
-@keyframes show-select {
+@keyframes show-position {
   from {
     height: 2.5rem;
   }
@@ -232,12 +263,12 @@ a {
   }
 }
 
-.show-dropdown {
-  -webkit-animation: show-select 0.3s ease forwards;
-          animation: show-select 0.3s ease forwards;
+.show-position-dropdown {
+  -webkit-animation: show-position 0.3s ease forwards;
+          animation: show-position 0.3s ease forwards;
 }
 
-@-webkit-keyframes close-select {
+@-webkit-keyframes close-position-select {
   from {
     height: 10rem;
   }
@@ -246,7 +277,7 @@ a {
   }
 }
 
-@keyframes close-select {
+@keyframes close-position-select {
   from {
     height: 10rem;
   }
@@ -255,12 +286,63 @@ a {
   }
 }
 
-.close-dropdown {
-  -webkit-animation: close-select 0.3s ease forwards;
-          animation: close-select 0.3s ease forwards;
+.close-position-dropdown {
+  -webkit-animation: close-position-select 0.3s ease forwards;
+          animation: close-position-select 0.3s ease forwards;
 }
 
-.header-menu, .header-menu-nav, .header-menu-signin, .header-menu-search, .header-mobile-menu-close, .main-signout-form-input.checkbox, .main-signout-alternative-or {
+@-webkit-keyframes show-region-select {
+  from {
+    height: 2.5rem;
+  }
+  to {
+    height: 36rem;
+  }
+}
+
+@keyframes show-region-select {
+  from {
+    height: 2.5rem;
+  }
+  to {
+    height: 36rem;
+  }
+}
+
+.show-region-dropdown {
+  -webkit-animation: show-region-select 0.3s ease forwards;
+          animation: show-region-select 0.3s ease forwards;
+}
+
+@-webkit-keyframes close-region-select {
+  from {
+    height: 36rem;
+  }
+  to {
+    height: 2.5rem;
+  }
+}
+
+@keyframes close-region-select {
+  from {
+    height: 36rem;
+  }
+  to {
+    height: 2.5rem;
+  }
+}
+
+.close-region-dropdown {
+  -webkit-animation: close-region-select 0.3s ease forwards;
+          animation: close-region-select 0.3s ease forwards;
+}
+
+.fd {
+  -webkit-animation: fade 0.5s ease forwards;
+          animation: fade 0.5s ease forwards;
+}
+
+.header-menu, .header-menu-nav, .header-menu-signin, .header-menu-search, .header-mobile-menu-close, .main-form-close, .main-signout-form-input.checkbox, .main-signout-alternative-or {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -403,6 +485,10 @@ body {
   line-height: 1rem;
 }
 
+.error.select {
+  bottom: -20px;
+}
+
 .header {
   width: 100%;
   height: 5rem;
@@ -495,6 +581,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 10;
   background-color: rgba(142, 147, 255, 0.8);
 }
 
@@ -575,6 +662,79 @@ body {
     margin-left: 1.25rem;
     margin-right: 1.25rem;
   }
+}
+
+.main .overley-signout {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(142, 147, 255, 0.8);
+  z-index: 15;
+}
+
+.main-form {
+  width: 90%;
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 16;
+  padding: 25px 0;
+  border-radius: 0.5rem;
+  visibility: hidden;
+}
+
+@media (min-width: 48em) {
+  .main-form {
+    top: 50vh;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+.main-form-close {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 2.5rem / 2);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: white;
+  border: 1px solid #7279ff;
+  border-radius: 0.5rem;
+}
+
+.main-form-close:hover {
+  cursor: pointer;
+}
+
+.main-form-item {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "FiraGO-Medium";
+  font-size: 1rem;
+  line-height: 1.875rem;
+}
+
+.main-form-item-value {
+  color: black;
+  font-family: "FiraGO-Regular";
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.main-form p {
+  display: block;
+  color: black;
+  text-align: center;
+  margin: 15px;
+  font-family: "FiraGO-Medium";
 }
 
 .main-nav {
@@ -782,8 +942,25 @@ body {
 
 .main-signout-form-input.select.open-select {
   border: 2px solid #7279ff;
-  height: 10rem;
   display: block;
+}
+
+.main-signout-form-input.select.open-select.region-container {
+  height: 36rem;
+}
+
+.main-signout-form-input.select.open-select.region-container .list {
+  height: 96%;
+  visibility: visible;
+}
+
+.main-signout-form-input.select.open-select.position-container {
+  height: 10rem;
+}
+
+.main-signout-form-input.select.open-select.position-container .list {
+  height: 80%;
+  visibility: visible;
 }
 
 .main-signout-form-input.select.open-select .placeholder::after {
@@ -794,10 +971,6 @@ body {
   content: "";
   background-color: #7279ff;
   margin-top: 0.75rem;
-}
-
-.main-signout-form-input.select.open-select .list {
-  visibility: visible;
 }
 
 .main-signout-form-input.select.open-select .list li {

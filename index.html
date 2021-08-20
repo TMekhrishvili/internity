@@ -39,6 +39,34 @@
         </div>
     </header>
     <main class="main">
+        <div class="overley-signout fade-signout">
+            <div class="main-form fade-signout">
+                <div id="close-signout" class="main-form-close">
+                    <img src="./app/assets/images/close.svg" alt="close">
+                </div>
+                <p class="main-signout-title">რეგისტრაცია</p>
+                <p>
+                    <span class="main-form-item">სახელი: </span>
+                    <span id="firstname-value" class="main-form-item-value">სახელი</span>
+                </p>
+                <p>
+                    <span class="main-form-item">გვარი: </span>
+                    <span id="lastname-value" class="main-form-item-value">გვარი</span>
+                </p>
+                <p>
+                    <span class="main-form-item">რეგიონი: </span>
+                    <span id="region-value" class="main-form-item-value">რეგიონი</span>
+                </p>
+                <p>
+                    <span class="main-form-item">პოზიცია: </span>
+                    <span id="position-value" class="main-form-item-value">პოზიცია</span>
+                </p>
+                <p>
+                    <span class="main-form-item">ელ.ფოსტა: </span>
+                    <span id="email-value" class="main-form-item-value">ელ.ფოსტა</span>
+                </p>
+            </div>
+        </div>
         <nav class="main-nav">
             <a class="main-nav-item" href="/index.html">მთავარი</a>
             <a class="main-nav-item" href="#">რეგისტრაცია</a>
@@ -49,42 +77,44 @@
             <form id="form" name="form" class="main-signout-form" onsubmit="return false">
 
                 <div class="container">
-                    <label class="main-signout-form-label required" for="region">რეგიონი</label><br>
-                    <div class="main-signout-form-input select">
+                    <label class="main-signout-form-label required" for="region">რეგიონი</label>
+                    <div id="region-container" class="main-signout-form-input select region-container">
                         <div class="placeholder">
                             <span id="choosen-region">აირჩიეთ რეგიონი</span>
                             <img src="./app/assets/images/dropdown.svg" alt="dropdown">
                         </div>
-                        <ul class="list">
+                        <ul id="region-list" class="list">
                             <li class="region-item">თბილისი</li>
                             <li class="region-item">აფხაზეთი</li>
                             <li class="region-item">აჭარა</li>
-                            <!-- <li>გურია</li>
-                        <li>იმერეთი</li>
-                        <li>კახეთი</li>
-                        <li>მცხეთა-მთიანეთი</li>
-                        <li>რაჭა-ლეჩხუმი და ქვემო სვანეთი</li>
-                        <li>სამეგრელო-ზემო სვანეთი</li>
-                        <li>სამცხე-ჯავახეთი</li>
-                        <li>ქვემო ქართლი</li>
-                        <li>შიდა ქართლი</li> -->
+                            <li class="region-item">გურია</li>
+                            <li class="region-item">იმერეთი</li>
+                            <li class="region-item">კახეთი</li>
+                            <li class="region-item">მცხეთა-მთიანეთი</li>
+                            <li class="region-item">რაჭა-ლეჩხუმი და ქვემო სვანეთი</li>
+                            <li class="region-item">სამეგრელო-ზემო სვანეთი</li>
+                            <li class="region-item">სამცხე-ჯავახეთი</li>
+                            <li class="region-item">ქვემო ქართლი</li>
+                            <li class="region-item">შიდა ქართლი</li>
                         </ul>
                     </div>
+                    <span class="error select"></span>
                 </div>
 
                 <div class="container">
                     <label class="main-signout-form-label required" for="position">პოზიცია</label><br>
-                    <div class="main-signout-form-input select">
+                    <div id="position-container" class="main-signout-form-input select position-container">
                         <div class="placeholder">
                             <span id="choosen-position">აირჩიეთ პოზიცია</span>
                             <img src="./app/assets/images/dropdown.svg" alt="dropdown">
                         </div>
-                        <ul class="list">
+                        <ul id="position-list" class="list">
                             <li class="position-item">მასწავლებელი</li>
                             <li class="position-item">სამართალდამცავი</li>
                             <li id="other">სხვა</li>
                         </ul>
                     </div>
+                    <span class="error select"></span>
                     <div id="other-position-container" class="hide">
                         <label class="main-signout-form-label required" for="other-position">შეიყვანეთ
                             პოზიცია</label>
