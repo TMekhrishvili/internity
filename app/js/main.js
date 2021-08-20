@@ -30,7 +30,6 @@ positions.forEach(element => {
         choosenPosition.innerText = value;
         choosenPosition.classList.add("choosen");
         otherPosition.classList.add("hide");
-        othP.required = false;
     });
 });
 
@@ -38,7 +37,6 @@ other.addEventListener("click", () => {
     choosenPosition.classList.remove("choosen");
     choosenPosition.innerText = other.textContent;
     otherPosition.classList.remove("hide");
-    othP.required = true;
     const el = document.querySelector('#other-position');
     el.focus();
 });
@@ -71,8 +69,7 @@ const eyes = document.querySelectorAll(".eye");
 
 eyes.forEach(element => {
     element.addEventListener("click", () => {
-        let previousSibling = element.previousElementSibling;
-        previousSibling.focus();
+        let previousSibling = element.previousElementSibling.previousElementSibling;
         const src = element.getAttribute('src');
         if (src.includes('opened')) {
             previousSibling.setAttribute("type", "text");

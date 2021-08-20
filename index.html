@@ -46,19 +46,20 @@
         <section class="main-signout">
             <p class="main-signout-title">რეგისტრაცია</p>
             <span class="main-signout-text">ავტორიზაცია შესაძლებელია მხოლოდ განმანათლებლებისთვის</span>
-            <form class="main-signout-form">
+            <form id="form" name="form" class="main-signout-form" onsubmit="return false">
 
-                <label class="main-signout-form-label required" for="region">რეგიონი</label><br>
-                <div class="main-signout-form-input select">
-                    <div class="placeholder">
-                        <span id="choosen-region">აირჩიეთ რეგიონი</span>
-                        <img src="./app/assets/images/dropdown.svg" alt="dropdown">
-                    </div>
-                    <ul class="list">
-                        <li class="region-item">თბილისი</li>
-                        <li class="region-item">აფხაზეთი</li>
-                        <li class="region-item">აჭარა</li>
-                        <!-- <li>გურია</li>
+                <div class="container">
+                    <label class="main-signout-form-label required" for="region">რეგიონი</label><br>
+                    <div class="main-signout-form-input select">
+                        <div class="placeholder">
+                            <span id="choosen-region">აირჩიეთ რეგიონი</span>
+                            <img src="./app/assets/images/dropdown.svg" alt="dropdown">
+                        </div>
+                        <ul class="list">
+                            <li class="region-item">თბილისი</li>
+                            <li class="region-item">აფხაზეთი</li>
+                            <li class="region-item">აჭარა</li>
+                            <!-- <li>გურია</li>
                         <li>იმერეთი</li>
                         <li>კახეთი</li>
                         <li>მცხეთა-მთიანეთი</li>
@@ -67,48 +68,71 @@
                         <li>სამცხე-ჯავახეთი</li>
                         <li>ქვემო ქართლი</li>
                         <li>შიდა ქართლი</li> -->
-                    </ul>
-                </div>
-
-                <label class="main-signout-form-label required" for="position">პოზიცია</label><br>
-                <div class="main-signout-form-input select">
-                    <div class="placeholder">
-                        <span id="choosen-position">აირჩიეთ პოზიცია</span>
-                        <img src="./app/assets/images/dropdown.svg" alt="dropdown">
+                        </ul>
                     </div>
-                    <ul class="list">
-                        <li class="position-item">მასწავლებელი</li>
-                        <li class="position-item">სამართალდამცავი</li>
-                        <li id="other">სხვა</li>
-                    </ul>
-                </div>
-                <div id="other-position-container" class="hide">
-                    <label class="main-signout-form-label required" for="other-position">შეიყვანეთ პოზიცია</label><br>
-                    <input id="other-position" class="main-signout-form-input" type="text" name="other-position"><br>
                 </div>
 
-                <label class="main-signout-form-label" for="workplace">სამუშაო ადგილი</label><br>
-                <input id="workplace" class="main-signout-form-input" type="text" name="workplace"><br>
-
-                <label class="main-signout-form-label required" for="email">ელ.ფოსტა</label><br>
-                <input id="email" class="main-signout-form-input" type="text" name="email"><br>
-
-                <label class="main-signout-form-label required" for="firstname">სახელი</label><br>
-                <input id="firstname" class="main-signout-form-input" type="text" name="firstname"><br>
-
-                <label class="main-signout-form-label required" for="lastname">გვარი</label><br>
-                <input id="lastname" class="main-signout-form-input" type="text" name="lastname"><br>
-
-                <label class="main-signout-form-label required" for="password">პაროლი</label><br>
-                <div class="password">
-                    <input id="password" class="main-signout-form-input" type="password" name="password">
-                    <img class="eye" src="./app/assets/images/opened-eye.svg" alt="open">
+                <div class="container">
+                    <label class="main-signout-form-label required" for="position">პოზიცია</label><br>
+                    <div class="main-signout-form-input select">
+                        <div class="placeholder">
+                            <span id="choosen-position">აირჩიეთ პოზიცია</span>
+                            <img src="./app/assets/images/dropdown.svg" alt="dropdown">
+                        </div>
+                        <ul class="list">
+                            <li class="position-item">მასწავლებელი</li>
+                            <li class="position-item">სამართალდამცავი</li>
+                            <li id="other">სხვა</li>
+                        </ul>
+                    </div>
+                    <div id="other-position-container" class="hide">
+                        <label class="main-signout-form-label required" for="other-position">შეიყვანეთ
+                            პოზიცია</label>
+                        <input id="other-position" class="main-signout-form-input" type="text" name="other-position">
+                        <span class="error"></span>
+                    </div>
                 </div>
 
-                <label class="main-signout-form-label required" for="repeat">გაიმეორეთ პაროლი</label><br>
-                <div class="password">
-                    <input id="repeat" class="main-signout-form-input" type="password" name="repeat">
-                    <img class="eye" src="./app/assets/images/opened-eye.svg" alt="open">
+                <div class="container">
+                    <label class="main-signout-form-label" for="workplace">სამუშაო ადგილი</label>
+                    <input id="workplace" class="main-signout-form-input" type="text" name="workplace">
+                    <span class="error"></span>
+                </div>
+
+                <div class="container">
+                    <label class="main-signout-form-label required" for="email">ელ.ფოსტა</label>
+                    <input id="email" class="main-signout-form-input" type="text" name="text">
+                    <span class="error"></span>
+                </div>
+
+                <div class="container">
+                    <label class="main-signout-form-label required" for="firstname">სახელი</label>
+                    <input id="firstname" class="main-signout-form-input" type="text" name="firstname">
+                    <span class="error"></span>
+                </div>
+
+                <div class="container">
+                    <label class="main-signout-form-label required" for="lastname">გვარი</label>
+                    <input id="lastname" class="main-signout-form-input" type="text" name="lastname">
+                    <span class="error"></span>
+                </div>
+
+                <div class="container">
+                    <div class="password">
+                        <label class="main-signout-form-label required" for="password">პაროლი</label>
+                        <input id="password" class="main-signout-form-input pass" type="password" name="password">
+                        <span class="error"></span>
+                        <img class="eye" src="./app/assets/images/opened-eye.svg" alt="open">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="password">
+                        <label class="main-signout-form-label required" for="repeat">გაიმეორეთ პაროლი</label>
+                        <input id="repeat" class="main-signout-form-input pass" type="password" name="repeat">
+                        <span class="error"></span>
+                        <img class="eye" src="./app/assets/images/opened-eye.svg" alt="open">
+                    </div>
                 </div>
 
                 <div class="main-signout-form-cb">
@@ -118,6 +142,7 @@
                     <label class="main-signout-form-label">ვეთანხმები პლატფორმის <a href="#">მოხმარების
                             პირობებს</a></label><br>
                 </div>
+
                 <div class="main-signout-form-cb">
                     <div id="privacy" class="main-signout-form-input checkbox checked">
                         <img src="./app/assets/images/checked.svg" alt="checked">
@@ -126,7 +151,7 @@
                             პოლიტიკას</a></label><br>
                 </div>
 
-                <button class="main-signout-form-input button" type="submit">რეგისტრაცია</button>
+                <button id="submit" class="main-signout-form-input button" type="submit">რეგისტრაცია</button>
             </form>
 
             <div class="main-signout-alternative">
@@ -168,6 +193,7 @@
 
     <script src="./app/js/header.js"></script>
     <script src="./app/js/main.js"></script>
+    <script src="./app/js/validation.js"></script>
 </body>
 
 </html>

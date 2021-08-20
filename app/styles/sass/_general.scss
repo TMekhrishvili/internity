@@ -29,3 +29,16 @@ body {
     display: none!important;
     visibility: hidden;
 }
+
+.container {
+    position: relative;
+}
+
+.error {
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 10px;
+    color: red;
+    @include font($firago-r, 0.7rem, 1rem);
+}
