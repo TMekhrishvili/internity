@@ -185,7 +185,14 @@
                             visibility: visible;
 
                             li {
-                                width: 100%
+                                width: 100%;
+                                padding: 7px 12px;
+
+                                &:hover {
+                                    color: $white;
+                                    background-color: $blue;
+                                    border-radius: 5px;
+                                }
                             }
                         }
                     }

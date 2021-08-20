@@ -756,6 +756,13 @@ body {
 
 .main-signout-form-input.select.open-select .list li {
   width: 100%;
+  padding: 7px 12px;
+}
+
+.main-signout-form-input.select.open-select .list li:hover {
+  color: white;
+  background-color: #7279ff;
+  border-radius: 5px;
 }
 
 .main-signout-form-cb.cb {
