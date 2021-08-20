@@ -68,6 +68,7 @@
         }
 
         &-item-line {
+            opacity: 0.3;
             display: none;
             @include dimension(1px, 20px);
             background-color: $black;

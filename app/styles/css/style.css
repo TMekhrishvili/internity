@@ -489,11 +489,6 @@ body {
   }
 }
 
-.main-div {
-  height: 10px;
-  margin: 25px;
-}
-
 .main-nav {
   margin: 1.25rem 0;
 }
@@ -609,6 +604,7 @@ body {
 .main-signout-form-input.button {
   background-color: #7279ff;
   color: white;
+  font-family: "FiraGO-Medium";
   font-size: 1rem;
   line-height: 1.3125rem;
   border: none;
@@ -814,6 +810,7 @@ body {
 }
 
 .footer-items-item-line {
+  opacity: 0.3;
   display: none;
   width: 1px;
   height: 20px;
