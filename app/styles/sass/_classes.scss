@@ -35,6 +35,13 @@
     align-items: center;
 }
 
+%f-col-se-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
 // input
 
 %input {

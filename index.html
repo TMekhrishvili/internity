@@ -47,38 +47,68 @@
             <p class="main-signout-title">რეგისტრაცია</p>
             <span class="main-signout-text">ავტორიზაცია შესაძლებელია მხოლოდ განმანათლებლებისთვის</span>
             <form class="main-signout-form">
-                <label class="main-signout-form-label required" for="html">რეგიონი</label><br>
-                <input class="main-signout-form-input" type="text" placeholder="აირჩიეთ რეგიონი" name="region"><br>
 
-                <label class="main-signout-form-label required" for="html">პოზიცია</label><br>
-                <input class="main-signout-form-input" type="text" placeholder="აირჩიეთ პოზიცია" name="position"><br>
+                <label class="main-signout-form-label required" for="region">რეგიონი</label><br>
+                <div class="main-signout-form-input select">
+                    <div class="placeholder">
+                        <span>აირჩიეთ რეგიონი</span>
+                        <img src="./app/assets/images/dropdown.svg" alt="dropdown">
+                    </div>
+                    <ul class="list">
+                        <li>თბილისი</li>
+                        <li>აფხაზეთი</li>
+                        <li>აჭარა</li>
+                        <!-- <li>გურია</li>
+                        <li>იმერეთი</li>
+                        <li>კახეთი</li>
+                        <li>მცხეთა-მთიანეთი</li>
+                        <li>რაჭა-ლეჩხუმი და ქვემო სვანეთი</li>
+                        <li>სამეგრელო-ზემო სვანეთი</li>
+                        <li>სამცხე-ჯავახეთი</li>
+                        <li>ქვემო ქართლი</li>
+                        <li>შიდა ქართლი</li> -->
+                    </ul>
+                </div>
 
-                <label class="main-signout-form-label" for="css">სამუშაო ადგილი</label><br>
-                <input class="main-signout-form-input" type="text" name="work-place"><br>
+                <label class="main-signout-form-label required" for="position">პოზიცია</label><br>
+                <div class="main-signout-form-input select">
+                    <div class="placeholder">
+                        <span>აირჩიეთ პოზიცია</span>
+                        <img src="./app/assets/images/dropdown.svg" alt="dropdown">
+                    </div>
+                    <ul class="list">
+                        <li>მასწავლებელი</li>
+                        <li>სამართალდამცავი</li>
+                        <li>სხვა</li>
+                    </ul>
+                </div>
 
-                <label class="main-signout-form-label required" for="javascript">ელ.ფოსტა</label><br>
-                <input class="main-signout-form-input" type="text" name="email"><br>
 
-                <label class="main-signout-form-label required" for="html">სახელი</label><br>
-                <input class="main-signout-form-input" type="text" name="firstname"><br>
+                <label class="main-signout-form-label" for="workplace">სამუშაო ადგილი</label><br>
+                <input id="workplace" class="main-signout-form-input" type="text" name="workplace"><br>
 
-                <label class="main-signout-form-label required" for="html">გვარი</label><br>
-                <input class="main-signout-form-input" type="text" name="lastname"><br>
+                <label class="main-signout-form-label required" for="email">ელ.ფოსტა</label><br>
+                <input id="email" class="main-signout-form-input" type="text" name="email"><br>
 
-                <label class="main-signout-form-label required" for="html">პაროლი</label><br>
-                <input class="main-signout-form-input" type="password" name="password"><br>
+                <label class="main-signout-form-label required" for="firstname">სახელი</label><br>
+                <input id="firstname" class="main-signout-form-input" type="text" name="firstname"><br>
 
-                <label class="main-signout-form-label required" for="html">გაიმეორეთ პაროლი</label><br>
-                <input class="main-signout-form-input" type="password" name="repeat"><br>
+                <label class="main-signout-form-label required" for="lastname">გვარი</label><br>
+                <input id="lastname" class="main-signout-form-input" type="text" name="lastname"><br>
+
+                <label class="main-signout-form-label required" for="password">პაროლი</label><br>
+                <input id="password" class="main-signout-form-input" type="password" name="password"><br>
+
+                <label class="main-signout-form-label required" for="repeat">გაიმეორეთ პაროლი</label><br>
+                <input id="repeat" class="main-signout-form-input" type="password" name="repeat"><br>
 
                 <div class="main-signout-form-cb">
-                    <input class="main-signout-form-input cb" type="checkbox" name="conditions">
-                    <label class="main-signout-form-label" for="conditions">ვეთანხმები პლატფორმის <a
-                            href="#">მოხმარების
+                    <input id="conditions" class="main-signout-form-input cb" type="checkbox" name="conditions">
+                    <label class="main-signout-form-label" for="conditions">ვეთანხმები პლატფორმის <a href="#">მოხმარების
                             პირობებს</a></label><br>
                 </div>
                 <div class="main-signout-form-cb">
-                    <input class="main-signout-form-input cb" type="checkbox" name="privacy">
+                    <input id="privacy" class="main-signout-form-input cb" type="checkbox" name="privacy">
                     <label class="main-signout-form-label" for="privacy">გავეცანი <a href="#">კონფიდენციალურობის
                             პოლიტიკას</a></label><br>
                 </div>
@@ -123,7 +153,8 @@
         </div>
     </footer>
 
-    <script src="./app/js/script.js"></script>
+    <script src="./app/js/header.js"></script>
+    <script src="./app/js/main.js"></script>
 </body>
 
 </html>

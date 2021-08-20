@@ -214,6 +214,52 @@ a {
           animation: fade-out 0.5s ease forwards;
 }
 
+@-webkit-keyframes show-select {
+  from {
+    height: 2.5rem;
+  }
+  to {
+    height: 10rem;
+  }
+}
+
+@keyframes show-select {
+  from {
+    height: 2.5rem;
+  }
+  to {
+    height: 10rem;
+  }
+}
+
+.show-dropdown {
+  -webkit-animation: show-select 0.3s ease forwards;
+          animation: show-select 0.3s ease forwards;
+}
+
+@-webkit-keyframes close-select {
+  from {
+    height: 10rem;
+  }
+  to {
+    height: 2.5rem;
+  }
+}
+
+@keyframes close-select {
+  from {
+    height: 10rem;
+  }
+  to {
+    height: 2.5rem;
+  }
+}
+
+.close-dropdown {
+  -webkit-animation: close-select 0.3s ease forwards;
+          animation: close-select 0.3s ease forwards;
+}
+
 .header-menu, .header-menu-nav, .header-menu-signin, .header-menu-search, .header-mobile-menu-close, .main-signout-alternative-or {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -226,7 +272,7 @@ a {
           align-items: center;
 }
 
-.header {
+.header, .main-signout-form-input.select .placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -276,6 +322,22 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.main-signout-form-input.select .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .main-signout-form-input, .main-signout-alternative-btn {
@@ -579,6 +641,10 @@ body {
   margin-bottom: 0.75rem;
 }
 
+.main-signout-form-label:hover {
+  cursor: pointer;
+}
+
 .main-signout-form-label > a {
   color: #7279ff;
 }
@@ -592,6 +658,10 @@ body {
 
 .main-signout-form-input {
   border: 1px solid #7279ff;
+}
+
+.main-signout-form-input:focus {
+  border: 2px solid #7279ff;
 }
 
 .main-signout-form-input.cb {
@@ -616,6 +686,63 @@ body {
 
 .main-signout-form-input.button:hover {
   cursor: pointer;
+}
+
+.main-signout-form-input.select {
+  text-align: start;
+  height: 2.5rem;
+}
+
+.main-signout-form-input.select:hover {
+  cursor: pointer;
+}
+
+.main-signout-form-input.select .list {
+  height: 80%;
+  visibility: hidden;
+}
+
+.main-signout-form-input.select .list > li {
+  font-family: "FiraGO-Medium";
+  font-size: 0.8125rem;
+  line-height: 1.0625rem;
+  color: #7279ff;
+}
+
+.main-signout-form-input.select .list > li:hover {
+  cursor: pointer;
+}
+
+.main-signout-form-input.select .placeholder {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main-signout-form-input.select .placeholder > span {
+  font-family: "FiraGO-Medium";
+  font-size: 0.8125rem;
+  line-height: 1.0625rem;
+  opacity: 0.3;
+}
+
+.main-signout-form-input.select.open-select {
+  border: 2px solid #7279ff;
+  height: 10rem;
+  display: block;
+}
+
+.main-signout-form-input.select.open-select .placeholder::after {
+  display: block;
+  width: 100%;
+  height: 2px;
+  opacity: 0.3;
+  content: '';
+  background-color: #7279ff;
+  margin-top: 0.75rem;
+}
+
+.main-signout-form-input.select.open-select .list {
+  visibility: visible;
 }
 
 .main-signout-form-cb.cb {

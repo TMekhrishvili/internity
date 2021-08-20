@@ -39,3 +39,29 @@
 .fade-out {
     animation: fade-out 0.5s ease forwards;
 }
+
+@keyframes show-select {
+    from {
+        height: 2.5rem;
+    }
+    to {
+        height: 10rem;
+    }
+}
+
+.show-dropdown {
+    animation: show-select 0.3s ease forwards;
+}
+
+@keyframes close-select {
+    from {
+        height: 10rem;
+    }
+    to {
+        height: 2.5rem;
+    }
+}
+
+.close-dropdown {
+    animation: close-select 0.3s ease forwards;
+}

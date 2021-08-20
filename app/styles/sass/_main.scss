@@ -86,6 +86,10 @@
                 @include font($firago-m, 1rem, 1.3125rem);
                 margin-bottom: 0.75rem;
 
+                &:hover {
+                    cursor: pointer;
+                }
+
                 > a {
                     color: $blue;
                 }
@@ -103,6 +107,10 @@
             &-input {
                 @extend %input;
                 border: 1px solid $blue;
+
+                &:focus {
+                    border: 2px solid $blue;
+                }
 
                 &.cb {
                     @include dimension(20px, 20px);
@@ -122,6 +130,60 @@
 
                     &:hover {
                         cursor: pointer;
+                    }
+                }
+
+                &.select {
+                    text-align: start;
+                    height: 2.5rem;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    .list {
+                        height: 80%;
+                        @extend %f-col-se-start;
+                        visibility: hidden;
+
+                        > li {
+                            @include font($firago-m, 0.8125rem, 1.0625rem);
+                            color: $blue;
+
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                    .placeholder {
+                        @extend %f-row-sb-c;
+                        flex-wrap: wrap;
+
+                        > span {
+                            @include font($firago-m, 0.8125rem, 1.0625rem);
+                            opacity: 0.3;
+                        }
+                    }
+
+                    &.open-select {
+                        border: 2px solid $blue;
+                        height: 10rem;
+                        display: block;
+
+                        .placeholder::after {
+                            display: block;
+                            width: 100%;
+                            height: 2px;
+                            opacity: 0.3;
+                            content: '';
+                            background-color: $blue;
+                            margin-top: 0.75rem;
+                        }
+
+                        .list {
+                            visibility: visible;
+                        }
                     }
                 }
             }
