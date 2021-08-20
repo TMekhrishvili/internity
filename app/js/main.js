@@ -2,6 +2,7 @@ const selects = document.querySelectorAll('.select');
 const positions = document.querySelectorAll('.position-item');
 const choosenPosition = document.querySelector('#choosen-position');
 const other = document.querySelector('#other');
+const othP = document.querySelector("#other-position");
 const otherPosition = document.querySelector('#other-position-container');
 
 const regions = document.querySelectorAll('.region-item');
@@ -29,6 +30,7 @@ positions.forEach(element => {
         choosenPosition.innerText = value;
         choosenPosition.classList.add("choosen");
         otherPosition.classList.add("hide");
+        othP.required = false;
     });
 });
 
@@ -36,6 +38,7 @@ other.addEventListener("click", () => {
     choosenPosition.classList.remove("choosen");
     choosenPosition.innerText = other.textContent;
     otherPosition.classList.remove("hide");
+    othP.required = true;
     const el = document.querySelector('#other-position');
     el.focus();
 });
@@ -46,5 +49,18 @@ regions.forEach(element => {
         const value = element.textContent;
         choosenRegion.innerText = value;
         choosenRegion.classList.add("choosen");
+    });
+});
+
+
+const checkbox = document.querySelectorAll(".checkbox");
+
+checkbox.forEach(element => {
+    element.addEventListener("click", () => {
+        if(element.classList.contains('checked')) {
+            element.classList.remove('checked');
+        } else {
+            element.classList.add('checked');
+        }
     });
 });

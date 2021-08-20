@@ -107,15 +107,26 @@
             &-input {
                 @extend %input;
                 border: 1px solid $blue;
-                
+
                 &:focus {
                     border: 2px solid $blue;
                 }
 
-                &.cb {
+                &.checkbox {
                     @include dimension(20px, 20px);
-                    margin-right: 0.625rem;
-                    margin-bottom: 0.75rem;
+                    @extend %f-row-c-c;
+                    padding: 0;
+                    margin: 0;
+                    border-radius: 3px;
+                    flex-shrink: 0;
+
+                    &.checked {
+                        background-color: $blue;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
 
                 &.button {
@@ -177,7 +188,7 @@
                             width: 100%;
                             height: 2px;
                             opacity: 0.3;
-                            content: '';
+                            content: "";
                             background-color: $blue;
                             margin-top: 0.75rem;
                         }
@@ -202,10 +213,12 @@
 
             &-cb {
                 @extend %f-row-start-start;
-
-                &.cb {
-                    font-size: 0.875rem;
-                    line-height: 1.5rem;
+                
+                > label {
+                    margin-left: 10px;
+                    > a {
+                        text-decoration: underline !important;
+                    }
                 }
             }
         }

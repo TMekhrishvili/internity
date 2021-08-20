@@ -102,18 +102,22 @@
                 <input id="lastname" class="main-signout-form-input" type="text" name="lastname"><br>
 
                 <label class="main-signout-form-label required" for="password">პაროლი</label><br>
-                <input id="password" class="main-signout-form-input" type="password" name="password"><br>
+                <input id="password" class="main-signout-form-input password" type="password" name="password"><br>
 
                 <label class="main-signout-form-label required" for="repeat">გაიმეორეთ პაროლი</label><br>
-                <input id="repeat" class="main-signout-form-input" type="password" name="repeat"><br>
+                <input id="repeat" class="main-signout-form-input password" type="password" name="repeat"><br>
 
                 <div class="main-signout-form-cb">
-                    <input id="conditions" class="main-signout-form-input cb" type="checkbox" name="conditions">
+                    <div id="conditions" class="main-signout-form-input checkbox">
+                        <img src="./app/assets/images/checked.svg" alt="checked">
+                    </div>
                     <label class="main-signout-form-label" for="conditions">ვეთანხმები პლატფორმის <a href="#">მოხმარების
                             პირობებს</a></label><br>
                 </div>
                 <div class="main-signout-form-cb">
-                    <input id="privacy" class="main-signout-form-input cb" type="checkbox" name="privacy">
+                    <div id="privacy" class="main-signout-form-input checkbox checked">
+                        <img src="./app/assets/images/checked.svg" alt="checked">
+                    </div>
                     <label class="main-signout-form-label" for="privacy">გავეცანი <a href="#">კონფიდენციალურობის
                             პოლიტიკას</a></label><br>
                 </div>
