@@ -28,7 +28,6 @@ positions.forEach(element => {
         const value = element.textContent;
         choosenPosition.innerText = value;
         choosenPosition.classList.add("choosen");
-
         otherPosition.classList.add("hide");
     });
 });

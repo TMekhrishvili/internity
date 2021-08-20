@@ -107,7 +107,7 @@
             &-input {
                 @extend %input;
                 border: 1px solid $blue;
-
+                
                 &:focus {
                     border: 2px solid $blue;
                 }
