@@ -378,6 +378,15 @@ body {
   overflow: hidden;
 }
 
+.choosen {
+  color: #7279ff !important;
+  opacity: 1 !important;
+}
+
+.hide {
+  display: none !important;
+}
+
 .header {
   width: 100%;
   height: 5rem;
@@ -743,6 +752,10 @@ body {
 
 .main-signout-form-input.select.open-select .list {
   visibility: visible;
+}
+
+.main-signout-form-input.select.open-select .list li {
+  width: 100%;
 }
 
 .main-signout-form-cb.cb {

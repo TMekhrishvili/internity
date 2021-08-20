@@ -183,6 +183,10 @@
 
                         .list {
                             visibility: visible;
+
+                            li {
+                                width: 100%
+                            }
                         }
                     }
                 }

@@ -73,16 +73,21 @@
                 <label class="main-signout-form-label required" for="position">პოზიცია</label><br>
                 <div class="main-signout-form-input select">
                     <div class="placeholder">
-                        <span>აირჩიეთ პოზიცია</span>
+                        <span id="choosen-position">აირჩიეთ პოზიცია</span>
                         <img src="./app/assets/images/dropdown.svg" alt="dropdown">
                     </div>
                     <ul class="list">
-                        <li>მასწავლებელი</li>
-                        <li>სამართალდამცავი</li>
-                        <li>სხვა</li>
+                        <li class="position-item">მასწავლებელი</li>
+                        <li class="position-item">სამართალდამცავი</li>
+                        <li id="other">სხვა</li>
                     </ul>
                 </div>
-
+                <div id="other-position-container" class="hide">
+                    <label class="main-signout-form-label required"
+                        for="other-position">შეიყვანეთ პოზიცია</label><br>
+                    <input id="other-position" class="main-signout-form-input" type="text"
+                        name="other-position"><br>
+                </div>
 
                 <label class="main-signout-form-label" for="workplace">სამუშაო ადგილი</label><br>
                 <input id="workplace" class="main-signout-form-input" type="text" name="workplace"><br>
