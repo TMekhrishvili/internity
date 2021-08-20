@@ -4,6 +4,9 @@ const choosenPosition = document.querySelector('#choosen-position');
 const other = document.querySelector('#other');
 const otherPosition = document.querySelector('#other-position-container');
 
+const regions = document.querySelectorAll('.region-item');
+const choosenRegion = document.querySelector('#choosen-region');
+
 // toggle dropdown
 selects.forEach(element => {
     element.addEventListener("click", () => {
@@ -36,4 +39,13 @@ other.addEventListener("click", () => {
     otherPosition.classList.remove("hide");
     const el = document.querySelector('#other-position');
     el.focus();
+});
+
+// choose region
+regions.forEach(element => {
+    element.addEventListener('click', () => {
+        const value = element.textContent;
+        choosenRegion.innerText = value;
+        choosenRegion.classList.add("choosen");
+    });
 });
