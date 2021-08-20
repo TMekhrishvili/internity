@@ -32,9 +32,7 @@
         }
 
         &-item {
-            font-family: $firago-b;
-            font-size: 0.75rem;
-            line-height: 1rem;
+            @include font($firago-b, 0.75rem, 1rem);
             color: $black;
 
             @include breakpoint-up(medium) {
@@ -64,16 +62,12 @@
         }
 
         &-title {
-            font-family: $firago-b;
-            font-size: 1.3125rem;
-            line-height: 1.75rem;
+            @include font($firago-b, 1.3125rem, 1.75rem);
             margin: 0.625rem 0;
         }
 
         &-text {
-            font-family: $firago-r;
-            font-size: 1rem;
-            line-height: 1.5rem;
+            @include font($firago-r, 1rem, 1.5rem);
             text-align: center;
             color: $blue;
             margin: 0.75rem 0;
@@ -89,9 +83,7 @@
 
             &-label {
                 display: inline-block;
-                font-family: $firago-m;
-                font-size: 1rem;
-                line-height: 1.3125rem;
+                @include font($firago-m, 1rem, 1.3125rem);
                 margin-bottom: 0.75rem;
 
                 > a {
@@ -113,8 +105,7 @@
                 border: 1px solid $blue;
 
                 &.cb {
-                    width: 20px;
-                    height: 20px;
+                    @include dimension(20px, 20px);
                     margin-right: 0.625rem;
                     margin-bottom: 0.75rem;
                 }
@@ -122,9 +113,7 @@
                 &.button {
                     background-color: $blue;
                     color: $white;
-                    font-family: $firago-m;
-                    font-size: 1rem;
-                    line-height: 1.3125rem;
+                    @include font($firago-m, 1rem, 1.3125rem);
                     border: none;
                     outline: none;
                     border-radius: 0.5rem;
@@ -163,9 +152,7 @@
                 margin: 2.5rem 0;
                 width: 100%;
                 @extend %f-row-c-c;
-                font-family: $firago-b;
-                font-size: 0.8125rem;
-                line-height: 1.0625rem;
+                @include font($firago-b, 0.8125rem, 1.0625rem);
 
                 @include breakpoint-up(medium) {
                     margin: 3.4375rem 0;
@@ -205,9 +192,7 @@
                     flex: 1;
                     text-align: center;
                     color: $white;
-                    font-family: $firago-m;
-                    font-size: 1rem;
-                    line-height: 2.5rem;
+                    @include font($firago-m, 1rem, 2.5rem);
                 }
             }
 
@@ -223,9 +208,7 @@
 
                 > p {
                     text-align: center;
-                    font-family: $firago-r;
-                    font-size: 1rem;
-                    line-height: 1.5rem;
+                    @include font($firago-r, 1rem, 1.5rem);
 
                     &:first-child {
                         margin-right: 0.5rem;

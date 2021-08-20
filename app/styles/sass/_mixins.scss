@@ -16,3 +16,10 @@
     width: $w;
     height: $h;
 }
+
+// font
+@mixin font($ff, $fs, $lh) {
+    font-family: $ff;
+    font-size: $fs;
+    line-height: $lh;
+}

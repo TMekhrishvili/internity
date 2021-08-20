@@ -35,8 +35,7 @@
                     vertical-align: middle;
 
                     &::after {
-                        width: 2px;
-                        height: 20px;
+                        @include dimension(2px, 20px);
                         content: "";
                         display: inline-block;
                         background-color: $black;
