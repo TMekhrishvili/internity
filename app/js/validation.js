@@ -75,7 +75,7 @@ const setError = (element, text) => {
     element.style.borderColor = "red";
     element.nextElementSibling.innerHTML = text;
     element.focus();
-    element.scrollIntoView();
+    element.previousElementSibling.scrollIntoView();
 }
 
 function validation() {
